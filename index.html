@@ -72,6 +72,24 @@
   </script>
 
   <style>
+    /* ---- Keyframes (must be in CSS, not just Tailwind config) ---- */
+    @keyframes fade-up {
+      0%   { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fade-in {
+      0%   { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes scroll-dot {
+      0%, 100% { transform: translateY(0);    opacity: 1; }
+      50%       { transform: translateY(12px); opacity: 0.2; }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(245,158,11,0.3); }
+      50%       { box-shadow: 0 0 45px rgba(245,158,11,0.65); }
+    }
+
     /* ---- Reset & Base ---- */
     *, *::before, *::after { box-sizing: border-box; margin: 0; }
     html { scroll-behavior: smooth; }
